@@ -1,0 +1,20 @@
+const showSocial = (toggleCard, socialCard) => {
+  const toggle = document.getElementById(toggleCard),
+      social = document.getElementById(socialCard);
+
+      toggle.addEventListener('click', () => {
+          // if animation class exists, we add the down-animation class
+          if(social.classList.contains('animation')) {
+            social.classList.add('down-animation')
+
+            // we remove the down animation class
+            setTimeout(() => {
+              social.classList.remove('down-animation')
+            }, 1000)
+          }
+          // Add the animation class to the div tag with the card__social class
+          social.classList.toggle('animation');
+      });
+};
+
+showSocial('card-toggle', 'card-social');

@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ========== Colors ========== */
+/* Color mode HSL (hue, saturation, lightness) */
+:root {
+  --first-color: #08e944; /* Base Sage green for text or borders */
+  --first-color-gradient: linear-gradient(30deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  --first-color-light: #05ff48; /* Lighter Sage green */
+  --black-color: hsl(0, 0%, 5%); /* Nearly black for background */
+  --text-color: hsl(0, 0%, 85%); /* Light grey for text */
+  --body-color: hsl(0, 0%, 100%); /* White for body background */
+  /* Typography */
+  --body-font: 'Lato', sans-serif;
+  --h3-font-size: 1.125rem;
+  --smaller-font-size: 0.75rem;
+}
+
+
+/*============= BASE ===========*/
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: var(--body-font);
+	background-color: var(--body-color);
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*============= CARD ===========*/
+
+.container {
+	height: 100vh;
+	margin-inline: 1.5rem;
+	display: grid;
+	place-items: center;
+}
+
+.card {
+	position: relative;
+	width: 256px;
+	background-color: var(--black-color);
+	padding: 1.25rem 2rem 3rem;
+	border-radius: 1.5rem;
+	text-align: center;
+	box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
+}
+
+.card__image {
+	width: 98px;
+	border-radius: 50%;
+}
+
+.card__border {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular shape */
+  background: linear-gradient(0deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__border:hover {
+  animation: rotate-colors 5s ease-in-out forwards; /* One-time smooth rotation */
+}
+
+@keyframes rotate-colors {
+  0% {
+    background: linear-gradient(0deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  5% {
+    background: linear-gradient(18deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  10% {
+    background: linear-gradient(36deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  15% {
+    background: linear-gradient(54deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  20% {
+    background: linear-gradient(72deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  25% {
+    background: linear-gradient(90deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  30% {
+    background: linear-gradient(108deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  35% {
+    background: linear-gradient(126deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  40% {
+    background: linear-gradient(144deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  45% {
+    background: linear-gradient(162deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  50% {
+    background: linear-gradient(180deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  55% {
+    background: linear-gradient(198deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  60% {
+    background: linear-gradient(216deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  65% {
+    background: linear-gradient(234deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  70% {
+    background: linear-gradient(252deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  75% {
+    background: linear-gradient(270deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  80% {
+    background: linear-gradient(288deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  85% {
+    background: linear-gradient(306deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  90% {
+    background: linear-gradient(324deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  95% {
+    background: linear-gradient(342deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+  100% {
+    background: linear-gradient(360deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+  }
+}
+
+
+
+
+
+
+.card__name {
+	color: var(--first-color);
+	font-size: var(--h3-font-size);
+	font-weight: 500;
+}
+
+.card__profession {
+	color: var(--text-color);
+	font-size: var(--smaller-font-size);
+	font-weight: 500;
+}
+
+.card__social {
+	width: 200px;
+	background: linear-gradient(30deg, #13A038 0%, #0092DB 40%, #8F49FE 90%);
+	padding: 0.75rem;
+	border-radius: 3rem;
+	text-align: initial;
+	box-shadow: 0 8px 24px hsla(29, 75%, 56%, 0.3);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -1.75rem;
+	margin: 0 auto;
+	overflow: hidden;
+	transform-origin: 18px 17px;
+  
+}
+
+.card__social-control {
+	position: relative;
+	transform: rotate(135deg);
+	transform-origin: 18px 18px;
+	transition: transform 0.45s ease;
+	transform: rotate(0);
+  
+}
+
+.card__social-toggle {
+	display: inline-flex;
+	background-color: var(--black-color);
+	color: var(--first-color);
+	font-size: 1.25rem;
+	padding: 0.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	z-index: 10;
+}
+
+.card__social-text {
+	display: block;
+	color: var(--black-color);
+	font-size: var(--smaller-font-size);
+	font-weight: 500;
+}
+
+.card__social-list {
+	display: inline-flex;
+	column-gap: 0.75rem;
+	transform: rotate(135deg);
+	transform-origin: 18px 17px;
+}
+
+.card__social-link {
+	display: inline-flex;
+	background-color: var(--first-color);
+	color: var(--black-color);
+	font-size: 1.25rem;
+	padding: 6px;
+	border-radius: 50%;
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Slower and smooth transitions */
+}
+
+.card__social-link:hover {
+  transform: scale(1.15); /* Slightly larger scale */
+  background-color: var(--first-color-light); /* Follow with a color change */
+}
+
+.card__social-text,
+.card__social-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-left: 3.1rem;
+}
+
+.card__social-text {
+	top: 0.5rem;
+}
+
+.animation .card__social-control{
+  transform: rotate(-135deg);
+}
+
+.card__social.animation{
+  animation: up-animation 1s ease-in-out forwards;
+}
+
+@keyframes up-animation{
+  0%, 100%{
+    transform: rotate(0);
+  }
+  50%, 60%{
+    transform: rotate(-3deg);
+  }
+  88%{
+    transform: rotate(1deg);
+  }
+}
+
+.card__social.down-animation{
+  animation: down-animation 1s ease-in-out forwards;
+
+}
+
+@keyframes down-animation {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50%, 60% {
+    transform: rotate(6deg);
+  }
+  88% {
+    transform: rotate(-1deg);
+  }
+}
